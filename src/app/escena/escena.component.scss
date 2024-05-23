@@ -1,34 +1,63 @@
 .card {
     border-radius: 30px;
+    height: 600px !important;
+    max-width: 370px !important;
 
     .img-container {
         border-top-left-radius: 30px !important;
         border-top-right-radius: 30px !important;
+        height: 60% !important;
     }
 
     .buttons-container {
-        
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        
-        .round-button {
-            background-color: rgb(54, 54, 54);
-            border-radius: 50%;
-            border: none;
-            width: 50px;
-            height: 50px;
-        }
-    
-        .round-button:hover {
-            background-color: rgb(73, 73, 73);
-        }
-    
-        .fa-arrow-right, .fa-arrow-left {
-            color: #f8f9fa;
-            margin-left: 10px;
-        }
 
+        .small-buttons-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            
+
+            .small-button{
+                background-color: rgb(160, 160, 160);
+                border: none;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+
+            .small-button-selected {
+                width: 20px;
+                border-radius: 40%;
+                background-color: rgb(73, 73, 73);
+            
+            }
+        }
+        
+        .arrow-buttons-container {
+            
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            
+            .round-button {
+                background-color: rgb(54, 54, 54);
+                border-radius: 50%;
+                border: none;
+                width: 50px;
+                height: 50px;
+            }
+        
+            .round-button:hover {
+                background-color: rgb(73, 73, 73);
+            }
+        
+            .fa-arrow-right, .fa-arrow-left {
+                color: #f8f9fa;
+                margin-left: 10px;
+            }
+    
+        }
     }
 }
 

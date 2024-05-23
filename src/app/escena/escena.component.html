@@ -2,19 +2,30 @@
 <div class="container d-flex align-items-center min-vh-100" >
     <div class="card mx-auto col-9 col-sm-6 col-md-5 col-lg-4">
         <div class="img-container" [style.backgroundColor]="steps[currentStep].bgcolor" >
-            <img src="{{steps[currentStep].img}}" class="card-img-top img-fluid my-5" alt="...">
+            <img src="{{steps[currentStep].img}}" class="card-img-top img-fluid my-5 p-4" alt="...">
         </div>
         <div class="card-body p-4 mb-5">
             <h4>{{steps[currentStep].title}}</h4>
             <p class="small mt-3">{{steps[currentStep].description}}</p>
         </div>
-        <div class="buttons-container mt-4 d-flex justify-content-center">
-            @if (currentStep > 0) { 
-                <button class="round-button fa-solid fa-arrow-left" (click)="previousStep()"></button>
-            }
-            @if (currentStep < steps.length -1) { 
-                <button class="round-button fa-solid fa-arrow-right" (click)="nextStep()"></button>
-            }
+        
+        <div class="buttons-container mt-4">
+            <div class="small-buttons-container">
+              @for (step of steps; track $index) {
+                <button class="small-button" 
+                [class.small-button-selected]="currentStep === $index"
+                (click)="selectStep($index)"></button>
+            }  
+
+            </div>
+            <div class="arrow-buttons-container">
+                @if (currentStep > 0) { 
+                    <button class="round-button fa-solid fa-arrow-left" (click)="previousStep()"></button>
+                }
+                @if (currentStep < steps.length -1) { 
+                    <button class="round-button fa-solid fa-arrow-right" (click)="nextStep()"></button>
+                }
+            </div>
         </div>
     </div>
 </div>
