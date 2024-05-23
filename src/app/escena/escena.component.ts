@@ -11,4 +11,19 @@ import { IStep } from '../iStep';
 export class EscenaComponent {
   @Input() steps: IStep[] = [];
 
+  @Input() currentStep = 0;
+
+  nextStep() {
+    if (this.currentStep < this.steps.length - 1) {
+      this.currentStep++;
+      
+    }
+  }
+
+  previousStep() {
+    if (this.currentStep > 0) {
+      this.currentStep--;
+    }
+  }
+
 }
