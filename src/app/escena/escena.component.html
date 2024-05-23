@@ -1,17 +1,19 @@
-<div>
-    @for (step of steps; track step) {
-        <br><br>
-        
-        <div class="card mx-auto" style="width: 18rem;">
-            <div [style.backgroundColor]="step.bgcolor">
-                <img src="{{step.img}}" class="card-img-top img-fluid" alt="...">
-            </div>
-            <div class="card-body">
-                <h3>{{step.title}}</h3>
-                <p>{{step.description}}</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+
+<div class="container d-flex align-items-center min-vh-100" >
+    <div class="card mx-auto col-9 col-sm-6 col-md-5 col-lg-4">
+        <div class="img-container" [style.backgroundColor]="steps[0].bgcolor" >
+            <img src="{{steps[0].img}}" class="card-img-top img-fluid my-5" alt="...">
         </div>
-    }
+        <div class="card-body p-4 mb-5">
+            <h4>{{steps[0].title}}</h4>
+            <p class="small">{{steps[0].description}}</p>
+        </div>
+        <div class="buttons-container mt-4 d-flex justify-content-center">
+            <button class="round-button fa-solid fa-arrow-left"></button>
+            <button class="round-button fa-solid fa-arrow-right"></button>
+        </div>
+    </div>
 </div>
+    
+
 
