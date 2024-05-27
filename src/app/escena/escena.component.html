@@ -1,6 +1,6 @@
 
 <div class="container d-flex align-items-center min-vh-100" >
-    <div class="card mx-auto col-9 col-sm-6 col-md-5 col-lg-4">
+    <div class="card mx-auto col-9 col-sm-6 col-md-5 col-lg-4" [@slideInOut]="state">
         <div class="img-container" [style.backgroundColor]="steps[currentStep].bgcolor" >
             <img src="{{steps[currentStep].img}}" class="card-img-top img-fluid my-5 p-4" alt="...">
         </div>
