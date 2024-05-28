@@ -15,7 +15,7 @@ Queremos crear una aplicación para mostrar un onboarding digital. Esta aplicaci
 ## 📋 Requisitos 
 
 - Node.js y npm instalados en tu sistema.
-- - Clonar repositorio
+- Clonar repositorio
 ```bash
 npm install
 ```
